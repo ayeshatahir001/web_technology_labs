@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+.sidebar {
+    width: 33%;
+    background-color: rgb(5, 5, 52);
+    color: white;
+    padding: 20px;
+    height: 142vh;
+}
+.main-content {
+    width: 67%;
+    background-color: skyblue;
+    padding: 20px;
+    position: relative;
+    height: 142vh;
+}
+.profile-pic {
+    display:flex;
+    width: 130px;
+    height: 130px;
+    background-color: white;
+    top: 20px;
+    right: 20px;
+    border: 2px solid rgb(7, 7, 41);
+}
+h2 {
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+}
+h3 {
+    color: rgb(5, 5, 40);
+}
+.contact-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.contact-icons img {
+    width: 20px;
+    height: 20px;
+}
+strong {
+    color: rgb(6, 6, 37);
+} 
+
+
+
