@@ -77,15 +77,14 @@ body {
     background-color: white;
     border-radius: 30px; /* Rounded corners */
     padding: 8px 20px;
-    width: 750px;
-    flex: grow 1;
+    width: 500px;
+    flex-grow:1;
     margin-right:20px;
 }
 
 
 
 .search-bar input {
-    display:flex;
     border: none;
     outline: none;
     width: 100%;
@@ -97,4 +96,195 @@ body {
     color: black;
 }
 
+.icons{
+    display:flex;
+    gap:25px;
+}
+.icons a{
+    color:white;
+    font-size: 24px;
+    text-decoration:none;
+}
+
+.icons a:hover {
+    color: #444;
+}
+
+/*category bar styling*/
+.category-section{
+  background-color:dimgrey ;
+  padding:10px;
+}
+.category-section ul{
+    display:flex;
+    justify-content: space-around;
+
+    
+    padding:0px;
+    margin:0px; 
+    list-style-type:none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.category-section li{
+    margin:0 15px;
+}
+.category-section a{
+    color:azure;
+    text-decoration: none;
+    font-size:15px;
+}
+.category-section a:hover{
+    background-color:lightsalmon;
+
+}
+ /* .discount{
+   background-color:black;
+   color:white;
+   padding: 40px 0;
+   text-align: center;
+}
+.discount-text{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width:1200px;
+    margin:0 auto;
+    height:100%;
+}
+
+.promo-left{
+  flex:2;
+   text-align: left;
+   padding-left:50px;
+}
+
+.discount-heading{
+    font-size:24px;
+    font-weight:bold;
+   font-family:serif;
+}
+
+.sub-heading {
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+.code {
+    font-size: 13px;
+    font-weight: normal;
+    margin-top: 5px; 
+
+
+}
+
+
+.promo-right {
+    flex: 10;
+    text-align: right;
+    font-size: 24px;
+    font-weight: normal;
+    padding-right: 300px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-left: 30px;
+    margin-top: -5px;
+}
+
+.promo-center {
+    flex: 1;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.large-discount-heading {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+
+.promo-bottom-text {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: normal;
+    color: #ccc; 
+}
+ */
+
+ .promo-banner {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 40px 0;  /* Increased padding to make the section taller */
+}
+
+/* Flexbox container for the content */
+.promo-content {
+    display: flex;
+    justify-content: space-between; /* Spread the left, center, and right parts */
+    align-items: flex-start;        /* Align items at the top */
+    max-width: 1200px;
+    margin: 0 auto;                 /* Center the container */
+    height: 150px;                  /* Set a fixed height for the banner */
+}
+
+/* Styling for the left part of the banner */
+.promo-left {
+    flex: 2;                        /* Left section takes more space */
+    text-align: left;                /* Left-align the text */
+    padding-left: 50px;              /* Move left text slightly towards the right */
+}
+
+.discount-heading {
+    font-size: 24px;                 /* Large font size for the main heading */
+    font-weight: bold;               /* Bold text for emphasis */
+    font-family: 'Arial', sans-serif;
+}
+
+.sub-heading {
+    font-size: 20px;                 /* Smaller font size for the subheading */
+    font-weight: normal;             /* Regular font weight */
+    margin-top: 10px;                /* Space between lines */
+}
+
+.code {
+    font-size: 16px;                 /* Even smaller font size for the code */
+    font-weight: normal;
+    margin-top: 5px;                 /* Space between lines */
+}
+
+/* Styling for the middle part of the banner (centered discount) */
+.promo-center {
+    flex: 2;                         /* Center section takes more space */
+    text-align: center;              /* Center-align text */
+    padding: 0 20px;                 /* Padding to keep some space */
+}
+
+.large-discount-heading {
+    font-size: 50px; 
+    padding-top: 20px;                /* Larger font size for the main discount */
+    font-weight: bold;               /* Bold text */
+}
+
+/* Styling for the right part of the banner */
+.promo-right {
+    flex: 1;                         /* Right section takes the remaining space */
+    text-align: right;               /* Align the "FREE WORLDWIDE DELIVERY" text to the right */
+    font-size: 22px;                 /* Font size for the right side text */
+    font-weight: bold;               /* Bold font weight */
+    padding-right: 50px;             /* Add space on the right */
+    display: flex;                   /* Use flexbox for vertical alignment */
+    justify-content: flex-start;     /* Align the content to the start */
+    align-items: flex-start;         /* Align the text towards the top of the flex container */
+}
+
+/* Bottom text container */
+.promo-bottom-text {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: normal;
+    color: #ccc; /* Lighter text color */
+}
 
