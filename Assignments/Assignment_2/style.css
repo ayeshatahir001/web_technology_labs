@@ -217,7 +217,7 @@ body {
     background-color: black;
     color: white;
     text-align: center;
-    padding: 40px 0;  /* Increased padding to make the section taller */
+    padding: 100px 0;  /* Increased padding to make the section taller */
 }
 
 /* Flexbox container for the content */
@@ -227,7 +227,7 @@ body {
     align-items: flex-start;        /* Align items at the top */
     max-width: 1200px;
     margin: 0 auto;                 /* Center the container */
-    height: 150px;                  /* Set a fixed height for the banner */
+    height: 180px;                  /* Set a fixed height for the banner */
 }
 
 /* Styling for the left part of the banner */
@@ -257,6 +257,7 @@ body {
 
 /* Styling for the middle part of the banner (centered discount) */
 .promo-center {
+   
     flex: 2;                         /* Center section takes more space */
     text-align: center;              /* Center-align text */
     padding: 0 20px;                 /* Padding to keep some space */
@@ -288,3 +289,53 @@ body {
     color: #ccc; /* Lighter text color */
 }
 
+/* Add white space above the video */
+.white-space {
+    height: 5px;  /* Adjust the height of the white space (gap) */
+    background-color: white;
+    width:100%;
+}
+
+/* Video Section */
+.video-section {
+    margin-top: 15px; /* Add a gap between the promo section and the video */
+    text-align: center; /* Center the video */
+}
+
+/* Make sure the video fits within the width of the container */
+video {
+    width: 100%; /* Video width is 90% of the container width */
+    max-width: 100%; /* Ensures the video doesn't go beyond the container */
+    margin: 0 auto; /* Center the video */
+}
+
+.white-space {
+    height: 5px;  /* Adjust the height of the white space (gap) */
+    background-color: white;
+    width:100%;
+}
+
+/* Video Section */
+.video2-section {
+    margin-top: 15px; /* Add a gap between the promo section and the video */
+    text-align: center; /* Center the video */
+}
+
+/* Make sure the video fits within the width of the container */
+video {
+    width: 100%; /* Video width is 90% of the container width */
+    max-width: 100%; /* Ensures the video doesn't go beyond the container */
+    margin: 0 auto; /* Center the video */
+}
+
+.image-section{
+    margin-top:30px;
+    text-align:center;
+
+}
+
+.image-container{
+    display:flex;
+    justify-content:center;
+    gap:5px;
+}
