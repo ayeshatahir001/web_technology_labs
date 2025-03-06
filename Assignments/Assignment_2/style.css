@@ -328,8 +328,8 @@ video {
     margin: 0 auto; /* Center the video */
 }
 
-.image-section{
-    margin-top:30px;
+/* .image-section{
+    margin-top:15px;
     text-align:center;
 
 }
@@ -337,5 +337,57 @@ video {
 .image-container{
     display:flex;
     justify-content:center;
-    gap:5px;
+    gap: 20px;
+    flex-wrap: wrap
 }
+ .image {
+        width: 45%;
+        max-width:100%; 
+        height: auto;
+        object-fit: cover;
+    }*/ 
+
+/* Image Section */
+.image-section {
+    margin-top: 30px; 
+    text-align: center; 
+}
+
+.image-container {
+    display: flex; 
+    justify-content: center; 
+    gap: 4px; 
+     
+}
+.image {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+.line{
+ text-align:center;
+ margin-top: 20px;
+ font-size: 30px;
+ font-weight: bold;
+}
+
+.Imagess{
+
+display:flex;
+justify-content: space-around;
+ margin:0px 0;
+ align-items: center;
+ gap:0px;
+
+}
+.image-item{
+ width:150px;
+}
+.image-item img{
+
+    width:100%;
+    height:;
+    /* border-radius:-8px; */
+}
+
