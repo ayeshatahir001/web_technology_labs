@@ -455,6 +455,34 @@ padding:0px 0px;
     border-radius:50%;
     color:blueviolet;
 }
+.container2{
+    background-color:darkslategrey; 
+    padding:10px 0;
+}
+.footer-bottom{
+    display:flex; 
+    justify-content:space-between;
+   
+}
+.footer-bottom p{
+    color: azure;
+    padding:10px 10px;
+    margin:0;
+}
+.bottom-links{
+  padding:10px 10px;
+
+}
+.bottom-links a{
+    color: azure;
+    text-decoration: none;
+
+}
+.bottom-links a:hover{
+    color:darkblue;
+    text-decoration: none;
+
+}
 
 
 
