@@ -179,26 +179,23 @@
      font-size: 30px;
      font-weight: bold;
     }
-    
-    .Imagess{
-    
-    display:flex;
-    justify-content: space-around;
-     margin:0px 0;
-     align-items: center;
-     gap:20px;
-     background-color: pink;
-    
-    
-    }
-    .image-item{
-     width:600px;
-    
-    }
-    .image-item img{
-        width:100%;
-        height:100%;
-    }
+Carousel Image Styling */
+ carousel-inner .carousel-item img {
+    width: 1400px; /* Makes the image responsive */
+    height: 300px;
+  } /* Set a fixed height for the carousel images */
+    /*object-fit: cover; Ensures the image covers the container properly*/
+    /* max-height: 250px; /* Prevents the image from becoming too large */
+    /*object-position: center; Ensures the image doesn't exceed the container height
+ }
+
+/* .carousel-inner .carousel-item img {
+    width: 100%; /* Makes the image responsive */
+    /*height: 500px; /* Set the height to 500px to prevent it from being too small */
+    /*object-fit: cover; /* Ensures the image covers the available space without stretching */
+    /* object-position: center; Ensures the image is centered */
+
+
     
     .container{
        max-width:1170; 
