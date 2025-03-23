@@ -181,8 +181,8 @@
     }
 Carousel Image Styling */
  carousel-inner .carousel-item img {
-    width: 1400px; /* Makes the image responsive */
-    height: 300px;
+    width: 200px; /* Makes the image responsive */
+    height: 50px;
   } /* Set a fixed height for the carousel images */
     /*object-fit: cover; Ensures the image covers the container properly*/
     /* max-height: 250px; /* Prevents the image from becoming too large */
@@ -197,7 +197,7 @@ Carousel Image Styling */
 
 
     
-    .container{
+.container{
        max-width:1170; 
        background-color:lightgray;
        margin-top:10px;
@@ -400,12 +400,6 @@ Carousel Image Styling */
         color:darkblue;
         text-decoration: none;
     
-    }
-    
-    
-    
-    
-    
-    
-    
+    } 
+
     
