@@ -47,7 +47,7 @@
     }
      
     
-     .promo-banner {
+     /* .promo-banner {
         background-color: black;
         color: white;
         text-align: center;
@@ -117,15 +117,93 @@
         font-weight: normal;
         color: #ccc; 
     }
+     */
     
-    
-    .white-space {
+    /* .promo-banner {
+        background-color: black;
+        padding: 100px 0px;
+        margin:5px 5px 5px 5px;
+        text-align: center;
+        height: 100%;
+      } */
+    /* .promo-banner {
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 100px 0;  
+    }
+      */
+
+    /* .promo-banner {
+        background-color: black;
+        padding: 80px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      } */
+
+
+      /* .promo-banner {
+        background-color: black;
+        padding: 80px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      } */
+
+      .promo-banner {
+        background-color: black;
+        padding: 40px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+  
+      .promo-inner {
+        background-color: #d3d3d3;
+        width: 98%;
+        max-width: 1600px;
+        padding: 90px 70px;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .promo-content .discount-heading {
+        font-size: 20px;
+        font-weight: bold;
+        color:#444;
+      }
+      .promo-content .sub-heading {
+        font-size: 18px;
+        color:#444;
+      }
+      .promo-content .code {
+        font-size: 16px;
+        color:#444;
+      }
+      .promo-content .large-discount-heading {
+        font-size: 32px;
+        font-weight: bold;
+        color:#444;
+      }
+      .promo-content .delivery {
+        font-size: 20px;
+        font-weight: bold;
+        color:#444;
+
+      }
+      .promo-bottom-text {
+        color:#444;
+        font-size: 14px;
+        margin-top: 10px;
+      }
+  
+      .white-space {
         height: 5px; 
         background-color: white;
         width:100%;
     }
-    
-    
+
     .video-section {
         margin-top: 15px; 
         text-align: center; 
@@ -179,32 +257,29 @@
      font-size: 30px;
      font-weight: bold;
     }
-Carousel Image Styling */
+/* Carousel Image Styling 
  carousel-inner .carousel-item img {
-    width: 200px; /* Makes the image responsive */
-    height: 50px;
-  } /* Set a fixed height for the carousel images */
-    /*object-fit: cover; Ensures the image covers the container properly*/
-    /* max-height: 250px; /* Prevents the image from becoming too large */
-    /*object-position: center; Ensures the image doesn't exceed the container height
- }
+    width: 100%; /* Makes the image responsive 
+    height: auto;
+    object-fit:cover;
+  }  */
 
-/* .carousel-inner .carousel-item img {
-    width: 100%; /* Makes the image responsive */
-    /*height: 500px; /* Set the height to 500px to prevent it from being too small */
-    /*object-fit: cover; /* Ensures the image covers the available space without stretching */
-    /* object-position: center; Ensures the image is centered */
+  carousel-inner  .carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
 
 
     
-.container{
+ .container{
        max-width:1170; 
        background-color:lightgray;
        margin-top:10px;
        height:auto;
     }
     
-    .footer-links {
+   /* .footer-links {
         display:flex;
         justify-content:center; 
         gap: 25px; 
@@ -287,7 +362,7 @@ Carousel Image Styling */
     
     .footer-col{
      width:25%;
-     padding:10px 10px;
+     padding:10px;
     
     
     }
@@ -402,4 +477,158 @@ Carousel Image Styling */
     
     } 
 
-    
+     */
+
+     /* .footer {
+        background-color: aliceblue;
+        padding: 40px 0;
+      }
+      .footer h4 {
+        font-size: 18px;
+        color: black;
+        margin-bottom: 20px;
+        position: relative;
+      }
+      .footer h4::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        height: 2px;
+        width: 50px;
+        background-color: blue;
+      }
+      .footer ul {
+        list-style: none;
+        padding: 0;
+      }
+      .footer ul li a {
+        text-decoration: none;
+        color: #444;
+        display: block;
+        margin-bottom: 10px;
+        transition: all 0.3s ease;
+      }
+      .footer ul li a:hover {
+        color: darkblue;
+        padding-left: 10px;
+      }
+      .social-media-links a,
+      .payment-methods a {
+        font-size: 24px;
+        margin-right: 20px;
+        text-decoration: none;
+      }
+      .social-icon-facebook { color: darkblue; }
+      .social-icon-instagram { color: purple; }
+      .social-icon-snapchat { color: darkorange; }
+      .payment-icon-visa { color: navy; }
+      .payment-icon-mastercard { color: black; }
+      .payment-icon-paypal { color: blueviolet; }
+      .payment-icon-amex { color: teal; }
+      .footer-bottom {
+        background-color: darkslategrey;
+        color: azure;
+        padding: 15px 0;
+      }
+      .footer-bottom a {
+        color: azure;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+      .footer-bottom a:hover {
+        color: darkblue;
+      } */
+
+
+      footer {
+        background-color: #e2e2e2;
+        padding: 20px 30px;
+        width: 100%;
+      }
+  
+      footer .row {
+        margin: 0;
+      }
+  
+      footer .container-fluid {
+        padding: 4;
+        margin: 4;
+      }
+  
+      footer h4 {
+        font-size: 18px;
+        color: black;
+        margin-bottom: 20px;
+        position: relative;
+      }
+  
+      footer h4::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        height: 2px;
+        width: 50px;
+        background-color: blue;
+      }
+  
+      footer ul {
+        list-style: none;
+        padding: 0;
+      }
+  
+      footer ul li a {
+        text-decoration: none;
+        color: #444;
+        display: block;
+        margin-bottom: 10px;
+        transition: all 0.3s ease;
+      }
+  
+      footer ul li a:hover {
+        color: darkblue;
+        padding-left: 10px;
+      }
+  
+      .social-media-links a,
+      .payment-methods a {
+        font-size: 24px;
+        margin-right: 20px;
+        text-decoration: none;
+      }
+  
+      .social-icon-facebook { color: darkblue; }
+      .social-icon-instagram { color: purple; }
+      .social-icon-snapchat { color: darkorange; }
+      .payment-icon-visa { color: navy; }
+      .payment-icon-mastercard { color: black; }
+      .payment-icon-paypal { color: blueviolet; }
+      .payment-icon-amex { color: teal; }
+  
+      .footer-bottom {
+        background-color: darkslategrey;
+
+        padding: 15px 0;
+      }
+  
+      .footer-bottom a {
+        color:blue;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+  
+      .footer-bottom a:hover {
+        color:crimson;
+      }
+
+
+
+
+      @media (max-width: 576px) {
+        .footer-bottom .d-flex {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+      }
