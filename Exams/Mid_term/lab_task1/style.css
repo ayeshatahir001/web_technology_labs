@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.navbar-nav .nav-link {
+  transition: all 0.3s ease;
+  color: darkorange;
+}
+
+.navbar-nav .nav-link:hover {
+  color: cadetblue;
+  background-color: #e2e2e2;
+}
+
+.navbar .d-flex .text-light:hover {
+  background-color: cadetblue;
+}
+
+.category-section {
+  background-color: grey;
+  padding: 10px;
+}
+.category-section ul {
+  display: flex;
+  gap: 2px;
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.category-section li {
+  margin: 0 15px;
+}
+.category-section a {
+  color: azure;
+  text-decoration: none;
+  font-size: 15px;
+}
+.category-section a:hover {
+  background-color: lightsalmon;
+}
+
+.promo-banner {
+  background-color: black;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.promo-inner {
+  background-color: #d3d3d3;
+  width: 98%;
+  max-width: 1600px;
+  padding: 90px 70px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.promo-content .discount-heading {
+  font-size: 20px;
+  font-weight: bold;
+  color: #444;
+}
+.promo-content .sub-heading {
+  font-size: 18px;
+  color: #444;
+}
+.promo-content .code {
+  font-size: 16px;
+  color: #444;
+}
+.promo-content .large-discount-heading {
+  font-size: 32px;
+  font-weight: bold;
+  color: #444;
+}
+.promo-content .delivery {
+  font-size: 20px;
+  font-weight: bold;
+  color: #444;
+}
+.promo-bottom-text {
+  color: #444;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.white-space {
+  height: 5px;
+  background-color: white;
+  width: 100%;
+}
+
+.video-section {
+  margin-top: 15px;
+  text-align: center;
+}
+
+video {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.white-space {
+  height: 5px;
+  background-color: white;
+  width: 100%;
+}
+
+.video2-section {
+  margin-top: 15px;
+  text-align: center;
+}
+
+video {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.image-section {
+  margin-top: 30px; 
+  text-align: center; 
+}
+
+.image-container {
+  display: flex; 
+  justify-content: center; 
+  gap: 4px; 
+}
+
+.image {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+}
+
+.line {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
+footer {
+  background-color: #e2e2e2;
+  padding: 20px 30px;
+  width: 100%;
+}
+
+footer .row {
+  margin: 0;
+}
+
+footer .container-fluid {
+  padding: 4;
+  margin: 4;
+}
+
+footer h4 {
+  font-size: 18px;
+  color: black;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+footer h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  height: 2px;
+  width: 50px;
+  background-color: blue;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #444;
+  display: block;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+footer ul li a:hover {
+  color: darkblue;
+  padding-left: 10px;
+}
+
+.social-media-links a,
+.payment-methods a {
+  font-size: 24px;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+.social-icon-facebook {
+  color: darkblue;
+}
+.social-icon-instagram {
+  color: purple;
+}
+.social-icon-snapchat {
+  color: darkorange;
+}
+.payment-icon-visa {
+  color: navy;
+}
+.payment-icon-mastercard {
+  color: black;
+}
+.payment-icon-paypal {
+  color: blueviolet;
+}
+.payment-icon-amex {
+  color: teal;
+}
+
+.footer-bottom {
+  background-color: darkslategrey;
+
+  padding: 15px 0;
+}
+
+.footer-bottom a {
+  color: blue;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-bottom a:hover {
+  color: crimson;
+}
+
+@media (max-width: 576px) {
+  .footer-bottom .d-flex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
