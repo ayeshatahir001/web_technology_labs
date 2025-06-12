@@ -1,0 +1,51 @@
+.page {
+  max-width: 360px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #f7f7f7;
+  border-radius: 8px;
+}
+.form p {
+  text-align: center;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+#btns {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.btn {
+  padding: 8px 16px;
+  cursor: pointer;
+  background: #ddd;
+  border-radius: 4px;
+  user-select: none;
+}
+.btn.active {
+  background: #007bff;
+  color: white;
+}
+.form label {
+  display: block;
+  margin-top: 10px;
+}
+.form input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+.butn#submit {
+  margin-top: 20px;
+  padding: 10px;
+  background: #28a745;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.butn#submit:hover {
+  background: #218838;
+}
