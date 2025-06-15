@@ -1,4 +1,4 @@
-.page {
+/* .page {
   max-width: 360px;
   margin: 50px auto;
   padding: 20px;
@@ -48,4 +48,68 @@
 }
 .butn#submit:hover {
   background: #218838;
+} */
+
+
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+  display: flex;
+  /* flex-direction: column; 
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+} */
+
+.login-container {
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 350px;
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.login-container label {
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 14px;
+  color: #444;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+
+.login-container button:hover {
+  background-color: #0056b3;
 }

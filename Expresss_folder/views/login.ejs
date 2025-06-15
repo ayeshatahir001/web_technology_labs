@@ -1,29 +1,17 @@
-<div class="page">
-    <form class="form" action="">
-        <p>Welcome,plz enter your email to login .</p>
-        <div id="btns">
-            <a href="">
-                <div class="btn active" id="login">
-                    Login
-                </div>
-            </a>
-            <a href="/register">
-                <div class="btn" id="register">
-                    Register
-                </div>
-            </a>
-        
-    </div>
-    <label for="name">Name:</label>
-    <input type="text" name="name" id="name">
-    <label for="email">Email:</label>
-    <input type="text" name="email" id="email">
-    <label for="password">Password</label>
-    <input type="password" id="password">
 
-    <div class="butn" id="submit">
-        Submit
-    </div>
+ <div class="login-container">
+    <h2>Login</h2>
+    <form action="" method="post">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <button type="submit">Login</button>
     </form>
-    
-</div>
+  </div>
+
+  
+<script src="/scripts/login.js"></script>
+

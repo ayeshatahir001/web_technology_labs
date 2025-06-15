@@ -1,0 +1,22 @@
+<div class="heading">
+  <h2>New in</h2>
+</div>
+
+<div class="container_div">
+  <% for( let index = 0; index < products.length; index++ ) { %>
+  <div class="small_container">
+    <a href="#">
+
+       <img src="<%= products[index].image %>" alt="" />  
+    </a>
+    
+  </div>
+  
+  <div class="product-details">
+        <h3><%= products[index].title %></h3>
+        <p class="price"><%= products[index].price %></p>
+        <p class="desc"><%= products[index].description %></p>
+      </div>
+
+  <% } %>
+</div>
