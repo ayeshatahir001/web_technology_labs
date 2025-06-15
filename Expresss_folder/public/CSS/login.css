@@ -1,4 +1,4 @@
-/* .page {
+/* /* .page {
   max-width: 360px;
   margin: 50px auto;
   padding: 20px;
@@ -48,11 +48,11 @@
 }
 .butn#submit:hover {
   background: #218838;
-} */
+} 
 
 
-/* Basic reset */
-* {
+
+ {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -66,7 +66,7 @@
   height: 100vh;
   align-items: center;
   justify-content: center;
-} */
+} 
 
 .login-container {
   background-color: white;
@@ -112,4 +112,98 @@
 
 .login-container button:hover {
   background-color: #0056b3;
+} */
+/* Center the whole login container */
+.page-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color:cadetblue;
+}
+
+/* Login box styling */
+.login-container {
+  background-color: #111820;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  width: 350px;
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+.login-container p {
+  text-align: center;
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.login-container label {
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+}
+
+.login-container input::placeholder {
+  color: #999;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #00bfff;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-container button:hover {
+  background-color: #009bd4;
+}
+
+/* Register link */
+.login-container a {
+  color: #00bfff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-container a:hover {
+  text-decoration: underline;
+}
+
+/* Top button (Login) styling */
+#btns {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 8px 16px;
+  cursor: pointer;
+  background: #00bfff;
+  color: white;
+  border-radius: 4px;
+  user-select: none;
+  font-weight: bold;
 }

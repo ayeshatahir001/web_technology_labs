@@ -1,0 +1,27 @@
+<div class="orders-container">
+  <h2>My Orders</h2>
+  <table class="orders-table">
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Total Price</th>
+        <th>Status</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% orders.forEach(order => { %>
+        <% order.items.forEach(item => { %>
+          <tr>
+            <td><%= item.description %></td>
+            <td><%= item.quantity %></td>
+            <td>PKR <%= item.price * item.quantity %></td>
+            <td class="order-status"><%= order.status %></td>
+            <td><%= order.createdAt.toDateString() %></td>
+          </tr>
+        <% }) %>
+      <% }) %>
+    </tbody>
+  </table>
+</div>

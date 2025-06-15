@@ -128,6 +128,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const session = require("express-session");
 const layout = require("express-ejs-layouts");
+const checkSession = require("./middleware/checkSession");
 const path = require("path");
 
 const app = express();
@@ -138,6 +139,7 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json()); 
 app.use(layout);
+app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 // ========== Session Setup ==========
@@ -152,10 +154,12 @@ app.use(
   })
 );
 
+// app.use(checkSession);
+
 // ========== MongoDB Connection ==========
 
 mongoose
-  .connect("mongodb://localhost:27017/men_database")
+  .connect("mongodb://127.0.0.1:27017/men-database")
   .then(() => console.log("Connected to men-database"))
   .catch((err) => console.log("MongoDB connection error:", err));
 
@@ -165,6 +169,9 @@ const Product =require("./models/product.model")// Make it available in other fi
 // ========== Routes ==========
 const authRoutes = require("./controllers/auth"); // Handles login/register/logout
 app.use(authRoutes);
+
+const orderRoutes = require("./controllers/order"); // Add this line at top with other routes
+app.use(orderRoutes); 
 
 
 app.get("/men", async (req, res) => {
@@ -184,11 +191,7 @@ app.get("/men", async (req, res) => {
 
 
 // ========== Landing Page ==========
-app.get("/landingPage", (req, res) => {
-  // Check if user is logged in
-  if (!req.session.user) {
-    return res.redirect("/login");
-  }
+app.get("/landingPage",checkSession, (req, res) => {
   res.render("landingPage");
 });
 
