@@ -173,6 +173,12 @@ app.use(authRoutes);
 const orderRoutes = require("./controllers/order"); // Add this line at top with other routes
 app.use(orderRoutes); 
 
+const adminProductRoutes = require("./controllers/products");
+const adminOrderRoutes = require("./controllers/adminOrders");
+
+app.use(adminProductRoutes);
+app.use(adminOrderRoutes);
+
 
 app.get("/men", async (req, res) => {
   try {

@@ -1,0 +1,14 @@
+<% products.forEach(prod => { %>
+  <div>
+    <img src="<%= prod.image %>" width="100" />
+    <p><%= prod.description %></p>
+    <p>Price: Rs <%= prod.price %></p>
+
+    <a href="/admin/products/edit/<%= prod._id %>">Edit</a>
+
+    <form action="/admin/products/delete/<%= prod._id %>" method="POST">
+      <button type="submit">Delete</button>
+    </form>
+    <hr>
+  </div>
+<% }) %>
