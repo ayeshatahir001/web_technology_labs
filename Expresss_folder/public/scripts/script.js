@@ -67,15 +67,25 @@ form.addEventListener("submit", function (e) {
   const success = document.getElementById("success-message");
   const submitBtn = form.querySelector("button");
 
+  // if (valid) {
+  //   success.textContent = "Form submitted successfully";
+  //   submitBtn.classList.add("success");
+  //   setTimeout(() => {
+  //     form.reset();
+  //     success.textContent = "";
+  //     submitBtn.classList.remove("success");
+  //   }, 3000);
+  // }
   if (valid) {
-    success.textContent = "Form submitted successfully";
-    submitBtn.classList.add("success");
-    setTimeout(() => {
-      form.reset();
-      success.textContent = "";
-      submitBtn.classList.remove("success");
-    }, 3000);
-  }
+  success.textContent = "✅ Your order has been completed";
+  submitBtn.classList.add("success");
+
+  setTimeout(() => {
+    form.submit(); // Actually send to backend now
+  }, 1000);
+}
+
+
 });
 
 function showError(input, message) {

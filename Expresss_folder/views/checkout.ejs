@@ -7,9 +7,18 @@
     <link rel="stylesheet" href="style(checkout).css" />
   </head> -->
   
-    <div class="form-box">
-      <form id="checkoutForm" novalidate>
+    <!-- <div class="form-box">
+      <form id="checkoutForm" action="/checkout" method="POST" novalidate></form>
         <h2>Checkout Page</h2>
+         
+        <h3>Order Summary</h3>
+<ul>
+ 
+</ul>
+
+
+
+
 
         <div class="row">
           <div class="field">
@@ -80,6 +89,88 @@
       </form>
     </div>
 
-    <script src="/scripts/script.js"></script>
+    <script src="/scripts/script.js"></script> -->
   
 <!-- </html> -->
+
+
+<div class="form-box">
+  <form id="checkoutForm" action="/checkout" method="POST" novalidate>
+    <h2>Checkout Page</h2>
+
+    <!-- Cart Summary -->
+    <h3>Order Summary</h3>
+    <ul>
+      <% cart.forEach(item => { %>
+        <li><%= item.title %> x <%= item.quantity %> — $<%= item.price * item.quantity %></li>
+      <% }) %>
+    </ul>
+    <p><strong>Total: $<%= total %></strong></p>
+
+    <!-- Checkout Form -->
+    <div class="row">
+      <div class="field">
+        <input type="text" name="firstname" id="firstname" placeholder="First Name" required />
+        <span class="error-message"></span>
+      </div>
+      <div class="field">
+        <input type="text" name="lastname" id="lastname" placeholder="Last Name" required />
+        <span class="error-message"></span>
+      </div>
+    </div>
+
+    <div class="field">
+      <input type="email" name="email" id="email" placeholder="Email Address" required />
+      <span class="error-message"></span>
+    </div>
+
+    <div class="row">
+      <div class="field">
+        <input type="text" name="phone" id="phone" placeholder="Phone Number" required />
+        <span class="error-message"></span>
+      </div>
+      <div class="field">
+        <input type="text" name="city" id="city" placeholder="City" required />
+        <span class="error-message"></span>
+      </div>
+    </div>
+
+    <div class="field">
+      <input type="text" name="address" id="address" placeholder="Address" required />
+      <span class="error-message"></span>
+    </div>
+
+    <div class="row">
+      <div class="field">
+        <input type="text" name="zipcode" id="zipcode" placeholder="Zip Code" required />
+        <span class="error-message"></span>
+      </div>
+      <div class="field">
+        <input type="text" name="postal" id="postal" placeholder="Postal Code" required />
+        <span class="error-message"></span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="field">
+        <input type="text" name="cardno" id="cardno" placeholder="Card Number" required />
+        <span class="error-message"></span>
+      </div>
+      <div class="field">
+        <input type="text" name="cvv" id="cvv" placeholder="CVV" required />
+        <span class="error-message"></span>
+      </div>
+    </div>
+
+    <div class="field">
+      <input type="month" name="expiry" id="expiry" required />
+      <span class="error-message"></span>
+    </div>
+
+    <button type="submit">Submit</button>
+    <p id="success-message"></p>
+  </form>
+</div>
+
+<script src="/scripts/script.js"></script>
+

@@ -154,6 +154,14 @@ app.use(
   })
 );
 
+
+app.use((req, res, next) => {
+  if (!req.session.cart) {
+    req.session.cart = [];  // initialize cart
+  }
+  next();
+});
+
 // app.use(checkSession);
 
 // ========== MongoDB Connection ==========
@@ -176,8 +184,14 @@ app.use(orderRoutes);
 const adminProductRoutes = require("./controllers/products");
 const adminOrderRoutes = require("./controllers/adminOrders");
 
+const cartRoutes = require("./controllers/cart");
+app.use(cartRoutes);
+
+
 app.use(adminProductRoutes);
 app.use(adminOrderRoutes);
+
+
 
 
 app.get("/men", async (req, res) => {
