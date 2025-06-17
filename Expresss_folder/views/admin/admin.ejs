@@ -1,12 +1,74 @@
 
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="/CSS/admin.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div class="admin-wrapper">
 
-<div class="admin-container">
-  <h1>Admin Dashboard</h1>
-  <div class="admin-links">
-    <a href="/admin/products">Manage Products</a>
-    <a href="/admin/add-product">Add New Product</a>
-    <a href="/admin/orders">View Orders</a>
-    <a href="/logout">Logout</a>
+    <!-- Sidebar with Actions -->
+    <div class="sidebar">
+      <h2>Admin Panel</h2>
+      <button id="add-btn">Add Product</button>
+      <button id="view-btn">View Products</button>
+      <a href="/logout" class="logout">Logout</a>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+
+      <!-- Add/Edit Product Form -->
+      <div id="add-form">
+        <h2>Add / Edit Product</h2>
+        <form id="add-product-form" method="POST">
+          <input type="hidden" name="productID" />
+          <input type="text" name="title" placeholder="Title" required />
+          <input type="text" name="price" placeholder="Price" required />
+          <input type="text" name="image" placeholder="Image URL" required />
+          <textarea name="description" placeholder="Description"></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+      <!-- Product Grid -->
+      <div id="product-list">
+        <h2>All Products</h2>
+        <div class="product-grid">
+          <% products.forEach(product => { %>
+            <div class="product-card" data-id="<%= product._id %>">
+              <img src="<%= product.image %>" alt="Product" />
+              <h3><%= product.title %></h3>
+              <p class="product-description"><%= product.description %></p>
+              <p class="product-price">PKR <%= product.price %></p>
+              <div class="card-buttons">
+                <button class="edit-product" data-id="<%= product._id %>">Edit</button>
+                <button class="delete-product" data-id="<%= product._id %>">Delete</button>
+              </div>
+            </div>
+          <% }) %>
+        </div>
+      </div>
+
+    </div>
+
+
+
+    
+
+
+
+
+
+
+
   </div>
-</div>
+
+  <script src="/scripts/admin.js"></script>
+</body>
+</html>
+

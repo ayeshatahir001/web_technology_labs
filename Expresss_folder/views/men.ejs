@@ -3,22 +3,21 @@
 </div>
 
 <div class="container_div">
-  <% products.forEach((product, index) => { %>
-  <div class="small_container">
-    <img src="<%= product.image %>" />
-    <h3><%= product.title %></h3>
-    <p class="price">Rs. <%= product.price %></p>
-    <p class="desc"><%= product.description %></p>
-
-    <div class="actions">
-      <form action="/add-to-cart/<%= product._id %>" method="POST">
-        <button class="btn">Add to Cart</button>
-      </form>
+  <% products.forEach((product) => { %>
+    <div class="product-card">
+      <div class="product-box">
+        <img src="<%= product.image %>" alt="<%= product.title %>">
+        <div class="details">
+          <h3><%= product.title %></h3>
+          <p class="price">Rs. <%= product.price %></p>
+          <p class="desc"><%= product.description %></p>
+        </div>
+        <div class="actions">
+          <form action="/add-to-cart/<%= product._id %>" method="POST">
+            <button class="btn">Add to Cart</button>
+          </form>
+        </div>
+      </div>
     </div>
-  </div>
-<% }) %>
-  
-  
+  <% }) %>
 </div>
-
-

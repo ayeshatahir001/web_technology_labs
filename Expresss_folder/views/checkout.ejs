@@ -1,176 +1,138 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Checkout Form</title>
-    <link rel="stylesheet" href="style(checkout).css" />
-  </head> -->
-  
-    <!-- <div class="form-box">
-      <form id="checkoutForm" action="/checkout" method="POST" novalidate></form>
-        <h2>Checkout Page</h2>
-         
-        <h3>Order Summary</h3>
-<ul>
- 
-</ul>
+<div class="page-center">
+  <div class="form-box">
+    <form id="checkoutForm" action="/checkout" method="POST" novalidate>
+      <h2>Checkout Page</h2>
 
+      <!-- Cart Summary -->
+      <h3>Order Summary</h3>
+      <ul>
+        <% cart.forEach(item => { %>
+        <li>
+          <%= item.title %> x <%= item.quantity %> — $<%= item.price *
+          item.quantity %>
+        </li>
+        <% }) %>
+      </ul>
+      <p><strong>Total: $<%= total %></strong></p>
 
-
-
-
-        <div class="row">
-          <div class="field">
-            <input
-              type="text"
-              id="firstname"
-              placeholder="First Name"
-              required
-            />
-            <span class="error-message"></span>
-          </div>
-          <div class="field">
-            <input type="text" id="lastname" placeholder="Last Name" required />
-            <span class="error-message"></span>
-          </div>
-        </div>
-
+      <!-- Checkout Form -->
+      <div class="row">
         <div class="field">
-          <input type="email" id="email" placeholder="Email Address" required />
+          <input
+            type="text"
+            name="firstname"
+            id="firstname"
+            placeholder="First Name"
+            required
+          />
           <span class="error-message"></span>
         </div>
-
-        <div class="row">
-          <div class="field">
-            <input type="text" id="phone" placeholder="Phone Number" required />
-            <span class="error-message"></span>
-          </div>
-          <div class="field">
-            <input type="text" id="city" placeholder="City" required />
-            <span class="error-message"></span>
-          </div>
-        </div>
-
         <div class="field">
-          <input type="text" id="address" placeholder="Address" required />
+          <input
+            type="text"
+            name="lastname"
+            id="lastname"
+            placeholder="Last Name"
+            required
+          />
           <span class="error-message"></span>
         </div>
+      </div>
 
-        <div class="row">
-          <div class="field">
-            <input type="text" id="zipcode" placeholder="Zip Code" required />
-            <span class="error-message"></span>
-          </div>
-          <div class="field">
-            <input type="text" id="postal" placeholder="Postal Code" required />
-            <span class="error-message"></span>
-          </div>
-        </div>
+      <div class="field">
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email Address"
+          required
+        />
+        <span class="error-message"></span>
+      </div>
 
-        <div class="row">
-          <div class="field">
-            <input type="text" id="cardno" placeholder="Card Number" required />
-            <span class="error-message"></span>
-          </div>
-          <div class="field">
-            <input type="text" id="cvv" placeholder="CVV" required />
-            <span class="error-message"></span>
-          </div>
-        </div>
-
+      <div class="row">
         <div class="field">
-          <input type="month" id="expiry" required />
+          <input
+            type="text"
+            name="phone"
+            id="phone"
+            placeholder="Phone Number"
+            required
+          />
           <span class="error-message"></span>
         </div>
+        <div class="field">
+          <input
+            type="text"
+            name="city"
+            id="city"
+            placeholder="City"
+            required
+          />
+          <span class="error-message"></span>
+        </div>
+      </div>
 
-        <button type="submit">Submit</button>
-        <p id="success-message"></p>
-      </form>
-    </div>
-
-    <script src="/scripts/script.js"></script> -->
-  
-<!-- </html> -->
-
-
-<div class="form-box">
-  <form id="checkoutForm" action="/checkout" method="POST" novalidate>
-    <h2>Checkout Page</h2>
-
-    <!-- Cart Summary -->
-    <h3>Order Summary</h3>
-    <ul>
-      <% cart.forEach(item => { %>
-        <li><%= item.title %> x <%= item.quantity %> — $<%= item.price * item.quantity %></li>
-      <% }) %>
-    </ul>
-    <p><strong>Total: $<%= total %></strong></p>
-
-    <!-- Checkout Form -->
-    <div class="row">
       <div class="field">
-        <input type="text" name="firstname" id="firstname" placeholder="First Name" required />
+        <input
+          type="text"
+          name="address"
+          id="address"
+          placeholder="Address"
+          required
+        />
         <span class="error-message"></span>
       </div>
+
+      <div class="row">
+        <div class="field">
+          <input
+            type="text"
+            name="zipcode"
+            id="zipcode"
+            placeholder="Zip Code"
+            required
+          />
+          <span class="error-message"></span>
+        </div>
+        <div class="field">
+          <input
+            type="text"
+            name="postal"
+            id="postal"
+            placeholder="Postal Code"
+            required
+          />
+          <span class="error-message"></span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <input
+            type="text"
+            name="cardno"
+            id="cardno"
+            placeholder="Card Number"
+            required
+          />
+          <span class="error-message"></span>
+        </div>
+        <div class="field">
+          <input type="text" name="cvv" id="cvv" placeholder="CVV" required />
+          <span class="error-message"></span>
+        </div>
+      </div>
+
       <div class="field">
-        <input type="text" name="lastname" id="lastname" placeholder="Last Name" required />
+        <input type="month" name="expiry" id="expiry" required />
         <span class="error-message"></span>
       </div>
-    </div>
 
-    <div class="field">
-      <input type="email" name="email" id="email" placeholder="Email Address" required />
-      <span class="error-message"></span>
-    </div>
-
-    <div class="row">
-      <div class="field">
-        <input type="text" name="phone" id="phone" placeholder="Phone Number" required />
-        <span class="error-message"></span>
-      </div>
-      <div class="field">
-        <input type="text" name="city" id="city" placeholder="City" required />
-        <span class="error-message"></span>
-      </div>
-    </div>
-
-    <div class="field">
-      <input type="text" name="address" id="address" placeholder="Address" required />
-      <span class="error-message"></span>
-    </div>
-
-    <div class="row">
-      <div class="field">
-        <input type="text" name="zipcode" id="zipcode" placeholder="Zip Code" required />
-        <span class="error-message"></span>
-      </div>
-      <div class="field">
-        <input type="text" name="postal" id="postal" placeholder="Postal Code" required />
-        <span class="error-message"></span>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="field">
-        <input type="text" name="cardno" id="cardno" placeholder="Card Number" required />
-        <span class="error-message"></span>
-      </div>
-      <div class="field">
-        <input type="text" name="cvv" id="cvv" placeholder="CVV" required />
-        <span class="error-message"></span>
-      </div>
-    </div>
-
-    <div class="field">
-      <input type="month" name="expiry" id="expiry" required />
-      <span class="error-message"></span>
-    </div>
-
-    <button type="submit">Submit</button>
-    <p id="success-message"></p>
-  </form>
+      <button type="submit">Submit</button>
+      <p id="success-message"></p>
+    </form>
+  </div>
 </div>
 
 <script src="/scripts/script.js"></script>
-

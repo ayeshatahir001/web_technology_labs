@@ -60,6 +60,20 @@ body {
     border-radius: 5px;
 }
 
+.nav-right {
+  margin-left: auto; 
+}
+
+
+
+.logout-btn {
+  padding: 8px 14px;
+  background-color: #ff4d4d;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
 .search-bar {
     display:flex;
     align-items: center;

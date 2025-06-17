@@ -145,7 +145,7 @@ app.set("view engine", "ejs");
 // ========== Session Setup ==========
 app.use(
   session({
-    secret: "mySuperSecretKey123", // 🔒 Use any strong string here
+    secret: "mySuperSecretKey123", 
     resave: false,
     saveUninitialized: true,
     cookie: {
@@ -182,14 +182,13 @@ const orderRoutes = require("./controllers/order"); // Add this line at top with
 app.use(orderRoutes); 
 
 const adminProductRoutes = require("./controllers/products");
-const adminOrderRoutes = require("./controllers/adminOrders");
 
 const cartRoutes = require("./controllers/cart");
 app.use(cartRoutes);
 
 
 app.use(adminProductRoutes);
-app.use(adminOrderRoutes);
+
 
 
 
@@ -211,7 +210,7 @@ app.get("/men", async (req, res) => {
 
 
 // ========== Landing Page ==========
-app.get("/landingPage",checkSession, (req, res) => {
+app.get("/landingPage",(req, res) => {
   res.render("landingPage");
 });
 
@@ -227,9 +226,7 @@ app.get("/checkout",(req,res)=>{
 
 });
 
-app.get("/accounts",(req,res)=>{
-  res.render("accounts");
-});
+
 
 app.get("/cv", (req, res) => {
   res.render("index",{layout:false});

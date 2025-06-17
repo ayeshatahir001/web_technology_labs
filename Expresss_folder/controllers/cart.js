@@ -1,8 +1,9 @@
 const express = require("express");
 const router = express.Router();
 const Product = require("../models/product.model");
+const checkSession = require("../middleware/checkSession");
 
-router.post("/add-to-cart/:id", async (req, res) => {
+router.post("/add-to-cart/:id",checkSession, async (req, res) => {
   const productId = req.params.id;
   const product = await Product.findById(productId);
 

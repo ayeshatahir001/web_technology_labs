@@ -1,13 +1,22 @@
- /* body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: beige;
+
+
+.page-center {
   display: flex;
-  justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  margin: 0;
-}  */
+  justify-content: center;
+  min-height: 100vh; /* full height */
+  background-color: #e2f3f5; 
+  padding: 20px;
+}
+
+
+
+
+
 .form-box {
+ 
+  
+
   background-color: cadetblue;
   padding: 30px;
   border-radius: 10px;

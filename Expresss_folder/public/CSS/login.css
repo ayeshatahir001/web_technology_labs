@@ -114,6 +114,14 @@
   background-color: #0056b3;
 } */
 /* Center the whole login container */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
 .page-center {
   display: flex;
   justify-content: center;

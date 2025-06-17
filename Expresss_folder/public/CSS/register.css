@@ -52,11 +52,18 @@
 
 
 /* Page background */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .register-page {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #1f4b4e; /* Teal-like */
+  background-color:#e8f0fe; /* Teal-like */
   height: 100vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
