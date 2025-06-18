@@ -1,0 +1,130 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+}
+
+.admin-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background: #2c3e50;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 30px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.sidebar button,
+.sidebar .logout {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #3498db;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.sidebar .logout {
+  background-color: crimson;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 30px;
+  background: #ffffff;
+}
+
+#add-form {
+  margin-bottom: 30px;
+}
+
+#add-form h2 {
+  margin-bottom: 15px;
+}
+
+#add-form input,
+#add-form textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+#add-form button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+}
+
+.product-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: contain; /* shows full image without cutting */
+  background-color: #f9f9f9; /* optional: white background for images */
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+
+.product-card h3 {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.card-buttons button {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-product {
+  background-color: #007bff;
+}
+
+.delete-product {
+  background-color: #dc3545;
+}

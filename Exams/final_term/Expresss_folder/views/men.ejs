@@ -1,0 +1,27 @@
+<div class="heading">
+  <h2>New in</h2>
+</div>
+
+<div class="back-button" style="margin: 10px 20px;">
+  <a href="/landingPage" class="btn" style="text-decoration: none; padding: 8px 15px; background-color: #333; color: white; border-radius: 5px;">← Back to Home</a>
+</div>
+
+<div class="container_div">
+  <% products.forEach((product) => { %>
+    <div class="product-card">
+      <div class="product-box">
+        <img src="<%= product.image %>" alt="<%= product.title %>">
+        <div class="details">
+          <h3><%= product.title %></h3>
+          <p class="price">Rs. <%= product.price %></p>
+          <p class="desc"><%= product.description %></p>
+        </div>
+        <div class="actions">
+          <form action="/add-to-cart/<%= product._id %>" method="POST">
+            <button class="btn">Add to Cart</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  <% }) %>
+</div>

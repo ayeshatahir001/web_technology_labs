@@ -1,0 +1,44 @@
+
+.complaints-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: linear-gradient(to right, #fbeaff, #dfe9f3);
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+
+.complaints-section h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+
+.complaints-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+
+.complaints-section li {
+  background-color: #ffffff;
+  padding: 20px 25px;
+  margin-bottom: 20px;
+  border-left: 6px solid #aad4f5;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.complaints-section li strong {
+  display: inline-block;
+  width: 110px;
+  color: #333;
+}
+
+.complaints-section p {
+  text-align: center;
+  color: #555;
+  font-size: 16px;
+}

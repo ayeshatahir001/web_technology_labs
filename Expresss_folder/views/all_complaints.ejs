@@ -1,0 +1,21 @@
+
+
+<link rel="stylesheet" href="/Css/all_complaints.css">
+
+<div class="complaints-section">
+  <h2>All Complaints (Admin View)</h2>
+  <% if (complaints.length === 0) { %>
+    <p>No complaints submitted yet.</p>
+  <% } else { %>
+    <ul>
+      <% complaints.forEach(c => { %>
+        <li>
+          <strong>User:</strong> <%= c.name %> (<%= c.email %>)<br>
+          <strong>Order:</strong> <%= c.orderId ? c.orderId._id : "Unknown" %><br>
+          <strong>Message:</strong> <%= c.message %><br>
+          <strong>Date:</strong> <%= c.createdAt.toLocaleString() %>
+        </li>
+      <% }) %>
+    </ul>
+  <% } %>
+</div>

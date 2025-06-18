@@ -1,0 +1,57 @@
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #fbeaff, #dfe9f3); /* soft pink to blue */
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+
+.complaint-section {
+  max-width: 800px;
+  margin: 60px auto;
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+
+.complaint-section h2 {
+  text-align: center;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+
+.complaint-section ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.complaint-section li {
+  background-color: #f4faff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 6px solid #7caeff;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+.complaint-section li strong {
+  display: inline-block;
+  width: 100px;
+  color: #333;
+}
+
+
+.complaint-section p {
+  text-align: center;
+  color: #666;
+  font-size: 16px;
+  margin-top: 20px;
+}

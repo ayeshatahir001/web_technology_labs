@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="/Css/complaint.css">
+
+<div class="complaint-section">
+  <h2>My Complaints</h2>
+
+  <% if (complaints.length === 0) { %>
+    <p>You have not submitted any complaints.</p>
+  <% } else { %>
+    <ul>
+      <% complaints.forEach(c => { %>
+        <li>
+          <strong>Order:</strong> <%= c.orderId._id %><br>
+          <strong>Message:</strong> <%= c.message %><br>
+          <strong>Date:</strong> <%= c.createdAt.toLocaleString() %>
+        </li>
+      <% }) %>
+    </ul>
+  <% } %>
+</div>
