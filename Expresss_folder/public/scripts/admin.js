@@ -1,5 +1,4 @@
 $(document).ready(function () {
-  // Toggle Views
   $("#add-btn").click(() => {
     $("#form-heading").text("Add New Product");
     $("form")[0].reset();
@@ -13,7 +12,7 @@ $(document).ready(function () {
     $("#add-form").slideUp();
   });
 
-  // Submit Add or Update
+  
   $("#add-product-form").on("submit", function (e) {
     e.preventDefault();
 
@@ -26,16 +25,16 @@ $(document).ready(function () {
     };
 
     const url = id
-      ? `/admin/products/edit/${id}`
-      : `/admin/products/add`;
+      ? '/admin/products/edit/${id}'
+      : '/admin/products/add';
 
     $.post(url, data)
       .done(() => {
-        alert(id ? "✅ Product updated!" : "✅ Product added!");
+        alert(id ? "Product updated!" : "Product added!");
         location.reload();
       })
       .fail(() => {
-        alert("❌ Operation failed.");
+        alert("Operation failed.");
       });
   });
 
@@ -56,13 +55,13 @@ $(document).ready(function () {
   $(".delete-product").click(function () {
     const id = $(this).data("id");
 
-    $.post(`/admin/products/delete/${id}`)
+    $.post('/admin/products/delete/${id}')
       .done(() => {
-        alert("🗑️ Product deleted!");
+        alert("Product deleted!");
         location.reload();
       })
       .fail(() => {
-        alert("❌ Delete failed.");
+        alert("Delete failed.");
       });
   });
 });

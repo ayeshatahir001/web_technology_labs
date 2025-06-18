@@ -7,7 +7,8 @@ router.post("/add-to-cart/:id",checkSession, async (req, res) => {
   const productId = req.params.id;
   const product = await Product.findById(productId);
 
-  if (!product) return res.redirect("/");
+  if (!product) 
+    return res.redirect("/");
 
   if (!req.session.cart) req.session.cart = [];
 
@@ -43,15 +44,39 @@ router.get("/cart", (req, res) => {
   });
 });
 
-
-//remvoe item
-router.post("/cart/remove/:id", (req, res) => {
-  req.session.cart = req.session.cart.filter(item => item.productId !== req.params.id);
-
+// Increase quantity
+router.post("/cart/increase/:id", (req, res) => {
+  const cart = req.session.cart || [];
+  const item = cart.find(i => i.productId === req.params.id);
+  if (item) item.quantity += 1;
   res.redirect("/cart");
 });
 
-// Show Cart Data on Checkout Page (/checkout)
+// Decrease quantity
+router.post("/cart/decrease/:id", (req, res) => {
+  const cart = req.session.cart || [];
+  const item = cart.find(i => i.productId === req.params.id);
+  if (item) {
+    if (item.quantity > 1) {
+      item.quantity -= 1;
+    } else {
+      // If quantity is 1, remove it
+      req.session.cart = cart.filter(i => i.productId !== req.params.id);
+    }
+  }
+  res.redirect("/cart");
+});
+
+
+
+//remvoe item
+router.post("/cart/remove/:id", (req, res) => {
+req.session.cart = req.session.cart.filter(item => item.productId !== req.params.id);
+req.session.message = "Cart is empty";
+return res.redirect("/men");
+
+});
+
 router.get("/checkout", (req, res) => {
   const cart = req.session.cart || [];
   const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
@@ -64,6 +89,4 @@ router.get("/checkout", (req, res) => {
 });
 
 });
-
-
 module.exports = router;

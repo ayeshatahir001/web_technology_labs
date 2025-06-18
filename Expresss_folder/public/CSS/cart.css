@@ -85,3 +85,17 @@ body {
 .checkout-btn:hover {
   background-color: #218838;
 }
+.qty-btn {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.qty {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+}

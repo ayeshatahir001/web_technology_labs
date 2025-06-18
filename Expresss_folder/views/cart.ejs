@@ -2,39 +2,58 @@
   <h1>My Shopping Cart</h1>
 
   <% if (cart.length === 0) { %>
-    <p>Your cart is empty.</p>
+  <p>Your cart is empty.</p>
   <% } else { %>
-    <table class="cart-table">
-      <thead>
-        <tr>
-          <th>Product</th>
-          <th>Qty</th>
-          <th>Price</th>
-          <th>Total</th>
-          <th>Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% cart.forEach(item => { %>
-          <tr>
-            <td><%= item.title %></td>
-            <td><%= item.quantity %></td>
-            <td>Rs. <%= item.price %></td>
-            <td>Rs. <%= item.quantity * item.price %></td>
-            <td>
-              <form action="/cart/remove/<%= item.productId %>" method="POST">
-                <button class="remove-btn">Remove</button>
-              </form>
-            </td>
-          </tr>
-        <% }); %>
-      </tbody>
-    </table>
+  <table class="cart-table">
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Qty</th>
+        <th>Price</th>
+        <th>Total</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% cart.forEach(item => { %>
+      <tr>
+        <td><%= item.title %></td>
+        <td>
+          <form
+            action="/cart/decrease/<%= item.productId %>"
+            method="POST"
+            style="display: inline"
+          >
+            <button type="submit" class="qty-btn">–</button>
+          </form>
 
-    <div class="cart-summary">
-      <p><strong>Subtotal:</strong> Rs. <%= total %></p>
-      <a href="/men" class="back-btn">🔙 Back to Shop</a>
-      <a href="/checkout" class="checkout-btn">Checkout</a>
-    </div>
+          <span class="qty"><%= item.quantity %></span>
+
+          <form
+            action="/cart/increase/<%= item.productId %>"
+            method="POST"
+            style="display: inline"
+          >
+            <button type="submit" class="qty-btn">+</button>
+          </form>
+        </td>
+
+        <td>Rs. <%= item.price %></td>
+        <td>Rs. <%= item.quantity * item.price %></td>
+        <td>
+          <form action="/cart/remove/<%= item.productId %>" method="POST">
+            <button class="remove-btn">Remove</button>
+          </form>
+        </td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+
+  <div class="cart-summary">
+    <p><strong>Subtotal:</strong> Rs. <%= total %></p>
+    <a href="/men" class="back-btn">Back to Shop</a>
+    <a href="/checkout" class="checkout-btn">Checkout</a>
+  </div>
   <% } %>
 </div>

@@ -1,17 +1,3 @@
-// const mongoose = require("mongoose");
-
-// const orderSchema = mongoose.Schema({
-//   userEmail: String, // Or use userId if preferred
-//   productTitle: String,
-//   quantity: Number,
-//   totalPrice: Number,
-//   date: {
-//     type: Date,
-//     default: Date.now
-//   }
-// });
-
-// module.exports = mongoose.model("Order", orderSchema);
 const mongoose = require("mongoose");
 
 const orderSchema = new mongoose.Schema({
@@ -28,10 +14,6 @@ const orderSchema = new mongoose.Schema({
     }
   ],
   total: Number,
-  status: {
-    type: String,
-    default: "Pending"
-  },
   createdAt: {
     type: Date,
     default: Date.now

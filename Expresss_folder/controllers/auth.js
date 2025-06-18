@@ -34,7 +34,7 @@ router.post("/register", async (req, res) => {
       name,
       email,
       password: hashedPassword,
-      role: email === "admin@gmail.com" ? "admin" : "user"  // 👈 Auto-assign role
+      role: email === "admin@gmail.com" ? "admin" : "user" 
     });
 
     await newUser.save();
@@ -76,7 +76,7 @@ router.post("/login", async (req, res) => {
       id: user._id,
       name: user.name,
       email: user.email,
-      role: user.role,  // 👈 Ensure this is saved in session
+      role: user.role,  
     };
 
     return res.redirect("/");
